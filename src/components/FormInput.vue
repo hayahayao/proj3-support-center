@@ -1,6 +1,7 @@
 <template>
     <div class="row">
-        <input
+        <textarea
+            v-if="element === 'textarea'"
             class="input"
             :class="inputClass"
             :name="name"
@@ -8,6 +9,20 @@
             :value="text"
             :placeholder="placeholder"
             @input="update"
+            v-bind="$attrs"
+        >
+            {{text}}
+        </textarea>
+        <input
+            v-if="element === 'input'"
+            class="input"
+            :class="inputClass"
+            :name="name"
+            :type="type"
+            :value="text"
+            :placeholder="placeholder"
+            @input="update"
+            v-bind="$attrs"
         />
     </div>
 </template>
@@ -38,6 +53,9 @@ export default {
             return {
                 'invalid': this.invalid,
             }
+        },
+        element() {
+            return this.type === 'textarea' ? this.type : 'input'
         },
     },
     methods: {
