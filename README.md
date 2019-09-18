@@ -1,29 +1,13 @@
 # proj3-support-center
 
-## Project setup
+This is the project I did in the process of learning [Vue.js 2 Web Development Projects](https://www.packtpub.com/web-development/vuejs-2-web-development-projects?utm_source=github&utm_medium=repository&utm_campaign=9781787127463) Chapter5.
+
+You can find server's code on <https://github.com/PacktPublishing/Vue-js-2-Web-Development-Projects/tree/master/Chapter05/chapter5-full/server>.
+
+## Compile and Run
 ```
 npm install
-```
-
-### Compiles and hot-reloads for development
-```
 npm run serve
 ```
 
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Run your tests
-```
-npm run test
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+// TODO: 知识总结，功能扩展
