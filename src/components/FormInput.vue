@@ -1,25 +1,12 @@
 <template>
     <div class="row">
-        <textarea
-            v-if="element === 'textarea'"
+        <component
+            :is="element"
             class="input"
             :class="inputClass"
             :name="name"
             :type="type"
-            :value="text"
-            :placeholder="placeholder"
-            @input="update"
-            v-bind="$attrs"
-        >
-            {{text}}
-        </textarea>
-        <input
-            v-if="element === 'input'"
-            class="input"
-            :class="inputClass"
-            :name="name"
-            :type="type"
-            :value="text"
+            :value.prop="text"
             :placeholder="placeholder"
             @input="update"
             v-bind="$attrs"
